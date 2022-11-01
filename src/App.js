@@ -16,6 +16,10 @@ function App() {
         name="Mr. Whiskerson"
         phone="(212) 555-1234"
         email="mr.whiskaz@catnap.meow"
+        isPun={true}
+        upvotes={10}
+        downvotes={2}
+        comments={{ author: 'Haroon', body: 'He is auther', title: 'None' }}
       />
     </div>
   )
