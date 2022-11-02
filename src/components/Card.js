@@ -1,13 +1,13 @@
 import React from 'react'
-import logo from '../image/katie-zaferes.png'
-import logo1 from '../image/star.png'
+// import logo from '../image/katie-zaferes.png'
+// import logo1 from '../image/star.png'
 
 export default function Card() {
   return (
     <div className="card">
-      <img src={logo} className="card--image" alt="" />
+      <img src="./image/katie-zaferes.png" className="card--image" alt="" />
       <div className="card--stats">
-        <img src={logo1} className="card--star" alt="" />
+        <img src="./image/star.png" className="card--star" alt="" />
         <span>5.0</span>
         <span className="gray">(6) • </span>
         <span className="gray">USA</span>

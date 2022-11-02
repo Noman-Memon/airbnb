@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../image/phone-icon.png'
-import logo1 from '../image/mail-icon.png'
+// import logo from '../image/phone-icon.png'
+// import logo1 from '../image/mail-icon.png'
 
 export default function Contact(props) {
   /**
@@ -13,7 +13,7 @@ export default function Contact(props) {
       <img src={props.img} alt="" />
       <h3>{props.name}</h3>
       <div className="info-group">
-        <img src={logo} alt="" />
+        <img src="./image/phone-icon.png" alt="" />
         {/* if there is an data in phone property then show what is in it (props.phone) */}
         {props.phone && (
           // we can also use this props.phone as a condition based
@@ -21,7 +21,7 @@ export default function Contact(props) {
         )}
       </div>
       <div className="info-group">
-        <img src={logo1} alt="" />
+        <img src="./image/mail-icon.png" alt="" />
         <p>{props.email}</p>
       </div>
       <div>
