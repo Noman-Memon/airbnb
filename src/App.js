@@ -1,16 +1,21 @@
 import './style.css'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import Card from './components/Card'
+// import Hero from './components/Hero'
+// import Navbar from './components/Navbar'
+// import Card from './components/Card'
 import Contact from './components/Contact'
 import logo from './image/mr-whiskerson.png'
+import Joke from './components/Joke'
+import jokesData from './components/jokeData'
 
 function App() {
+  const jokeElements = jokesData.map((joke) => {
+    return <Joke setup={joke.setup} punchline={joke.punchline} />
+  })
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar />
       <Hero />
-      <Card />
+      <Card /> */}
       <Contact
         img={logo}
         name="Mr. Whiskerson"
@@ -21,6 +26,7 @@ function App() {
         downvotes={2}
         comments={{ author: 'Haroon', body: 'He is auther', title: 'None' }}
       />
+      {jokeElements}
     </div>
   )
 }
