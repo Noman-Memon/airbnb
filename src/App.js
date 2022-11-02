@@ -23,6 +23,7 @@ function App() {
         title={item.title}
         price={item.price}
         key={item.id}
+        openSpots={item.openSpots}
       />
     )
   })
