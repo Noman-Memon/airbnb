@@ -1,6 +1,6 @@
 import './style.css'
-// import Hero from './components/Hero'
-// import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Navbar from './components/Navbar'
 import Card from './components/Card'
 // import Contact from './components/Contact'
 // import logo from './image/mr-whiskerson.png'
@@ -14,12 +14,12 @@ function App() {
     return <Joke setup={joke.setup} punchline={joke.punchline} />
   })
   const cards = data.map((item, i) => {
-    return <Card key={item.id} item={item} />
+    return <Card key={item.id} {...item} />
   })
   return (
     <div className="App">
-      {/* <Navbar />
-      <Hero /> */}
+      <Navbar />
+      <Hero />
       {/* <Card /> */}
       {/* <Contact
         img="./image/mr-whiskerson.png"
