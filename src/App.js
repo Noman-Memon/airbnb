@@ -1,8 +1,8 @@
 import './style.css'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
+// import Hero from './components/Hero'
+// import Navbar from './components/Navbar'
 import Card from './components/Card'
-import Contact from './components/Contact'
+// import Contact from './components/Contact'
 // import logo from './image/mr-whiskerson.png'
 import Joke from './components/Joke'
 import jokesData from './components/jokeData'
@@ -14,18 +14,7 @@ function App() {
     return <Joke setup={joke.setup} punchline={joke.punchline} />
   })
   const cards = data.map((item, i) => {
-    return (
-      <Card
-        img={item.coverImg}
-        location={item.location}
-        rating={item.stats.rating}
-        reviewContent={item.stats.reviewCount}
-        title={item.title}
-        price={item.price}
-        key={item.id}
-        openSpots={item.openSpots}
-      />
-    )
+    return <Card key={item.id} item={item} />
   })
   return (
     <div className="App">
@@ -41,8 +30,8 @@ function App() {
         upvotes={10}
         downvotes={2}
         comments={{ author: 'Haroon', body: 'He is auther', title: 'None' }}
-      />
-      {jokeElements} */}
+      /> */}
+      {jokeElements}
       <section className="cards-list">{cards}</section>
     </div>
   )
