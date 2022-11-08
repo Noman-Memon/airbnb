@@ -4,15 +4,15 @@ import Navbar from './components/Navbar'
 import Card from './components/Card'
 // import Contact from './components/Contact'
 // import logo from './image/mr-whiskerson.png'
-import Joke from './components/Joke'
-import jokesData from './components/jokeData'
+// import Joke from './components/Joke'
+// import jokesData from './components/jokeData'
 import data from './components/data'
 
 function App() {
   // console.log(data)
-  const jokeElements = jokesData.map((joke, i) => {
-    return <Joke setup={joke.setup} punchline={joke.punchline} />
-  })
+  // const jokeElements = jokesData.map((joke, i) => {
+  //   return <Joke setup={joke.setup} punchline={joke.punchline} />
+  // })
   const cards = data.map((item, i) => {
     return <Card key={item.id} {...item} />
   })
@@ -31,7 +31,7 @@ function App() {
         downvotes={2}
         comments={{ author: 'Haroon', body: 'He is auther', title: 'None' }}
       /> */}
-      {jokeElements}
+      {/* {jokeElements} */}
       <section className="cards-list">{cards}</section>
     </div>
   )
